@@ -35,6 +35,8 @@ services:
 
     php:
         build:
+            args:
+              USER_ID: ${USER_ID}
             context: ./.docker/php
         volumes:
             - ./Source:/var/www
