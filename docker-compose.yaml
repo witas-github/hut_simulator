@@ -34,8 +34,8 @@ services:
         labels:
             - traefik.docker.network=proxy
             - traefik.enable=true
-            - traefik.basic.frontend.rule=Host:symfony.local
-            - traefik.basic.port=80
+            - traefik.frontend.rule=Host:symfony.local
+            - traefik.port=80
 
     php:
         env_file:
@@ -82,8 +82,8 @@ services:
         labels:
             - traefik.docker.network=proxy
             - traefik.enable=true
-            - traefik.basic.frontend.rule=Host:db.symfony.local
-            - traefik.basic.port=8080
+            - traefik.frontend.rule=Host:db.symfony.local
+            - traefik.port=8080
 
     blackfire:
         image: blackfire/blackfire
@@ -104,8 +104,8 @@ services:
         labels:
             - traefik.docker.network=proxy
             - traefik.enable=true
-            - traefik.basic.frontend.rule=Host:mail.symfony.local
-            - traefik.basic.port=8025
+            - traefik.frontend.rule=Host:mail.symfony.local
+            - traefik.port=8025
 
 networks:
     internal:
